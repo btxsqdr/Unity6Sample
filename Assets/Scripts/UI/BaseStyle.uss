@@ -1,0 +1,28 @@
+:root {    
+    justify-content: center;
+    align-items: center;
+    --border-width: 4px;
+}
+
+.debug-box {
+    border-width: 2px;
+    border-color: red;
+}
+
+.nav-bar {
+    border-width: 2px;
+    border-color: red;
+    width: 786px;
+    height: 200px;
+    position: relative;
+    top:0px;
+}
+
+.scroll-box {
+    width: 500px;
+    height: 350px;
+}
+
+.product-cell {
+    
+}
