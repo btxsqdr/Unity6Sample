@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using Newtonsoft.Json;
 using UnityEngine;
 using UnityEngine.Networking;
 
@@ -27,8 +29,6 @@ namespace Unity6Sample
     {
       string url = BASE_URL + "/Users";
       StartCoroutine(FetchData(url));
-
-      // StartCoroutine(PingUpdate());
     }
 
     IEnumerator FetchData(string url)
@@ -44,11 +44,9 @@ namespace Unity6Sample
         {
           try
           {
-            Debug.Log(request.downloadHandler.text);
+            User[] user = JsonConvert.DeserializeObject<User[]>(request.downloadHandler.text);
             
-            User user = JsonUtility.FromJson<User>(request.downloadHandler.text);
-
-            Debug.Log($"user: name: {user.name}");
+            Debug.Log($"user: name: {user?.First()?.name}");
           }
           catch (Exception e)
           {
@@ -56,17 +54,6 @@ namespace Unity6Sample
           }
         }
       }
-    }
-
-    IEnumerator PingUpdate()
-    {
-      yield return new WaitForSeconds(1f);
-      var ping = new Ping("142.250.191.46");
-      yield return new WaitForSeconds(1f);
-      while (!ping.isDone) yield return null;
-
-      Debug.Log(ping.time);
-      pingList.Add(ping.time);
     }
   }
 }
