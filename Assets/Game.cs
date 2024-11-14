@@ -6,11 +6,9 @@ using Newtonsoft.Json;
 using UnityEngine;
 using UnityEngine.Networking;
 
-namespace Unity6Sample
-{
+namespace Unity6Sample {
   [Serializable]
-  public class User
-  {
+  public class User {
     public string id;
     public string name;
     public string createdAt;
@@ -19,37 +17,39 @@ namespace Unity6Sample
     public int hp;
   }
 
-  public class Game : MonoBehaviour
-  {
-    private const string BASE_URL = "https://6731b5a67aaf2a9aff11acdf.mockapi.io/api/v1";
+  public class Game : MonoBehaviour {
+    private readonly string MOCKAPI_BASE_URL = "https://6731b5a67aaf2a9aff11acdf.mockapi.io/api/v1";
+    private readonly string EPIC_STORE_URL = "https://store.epicgames.com/en-US/";
 
-    List<int> pingList = new List<int>();
-
-    void Start()
-    {
-      string url = BASE_URL + "/Users";
-      StartCoroutine(FetchData(url));
+    void Start() {
+      StartCoroutine(FetchEpicStoreData());
+      
+      // string url = MOCKAPI_BASE_URL + "/Users";
+      // StartCoroutine(FetchData(url));
     }
 
-    IEnumerator FetchData(string url)
-    {
-      using (UnityWebRequest request = UnityWebRequest.Get(url))
-      {
+    IEnumerator FetchEpicStoreData() {
+      // data scrap epic store 
+      string url = EPIC_STORE_URL;
+
+      
+
+      yield return null;
+    }
+    
+    IEnumerator FetchData(string url) {
+      using (UnityWebRequest request = UnityWebRequest.Get(url)) {
         yield return request.SendWebRequest();
-        if (request.result == UnityWebRequest.Result.ConnectionError)
-        {
+        if (request.result == UnityWebRequest.Result.ConnectionError) {
           Debug.LogError(request.error);
         }
-        else
-        {
-          try
-          {
+        else {
+          try {
             User[] user = JsonConvert.DeserializeObject<User[]>(request.downloadHandler.text);
-            
+
             Debug.Log($"user: name: {user?.First()?.name}");
           }
-          catch (Exception e)
-          {
+          catch (Exception e) {
             Debug.LogError(e);
           }
         }
