@@ -19,8 +19,7 @@ namespace Unity6Sample {
 
   public class Game : MonoBehaviour {
     private readonly string MOCKAPI_BASE_URL = "https://6731b5a67aaf2a9aff11acdf.mockapi.io/api/v1";
-    private readonly string EPIC_STORE_URL = "https://store.epicgames.com/en-US/";
-
+    
     void Start() {
       StartCoroutine(FetchEpicStoreData());
       

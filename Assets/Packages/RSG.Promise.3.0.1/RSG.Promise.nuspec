@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>RSG.Promise</id>
+    <version>3.0.1</version>
+    <authors>Real Serious Games</authors>
+    <owners>Real Serious Games</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
+    <projectUrl>https://github.com/Real-Serious-Games/C-Sharp-Promise</projectUrl>
+    <description>Promises library for C# for management of asynchronous operations.</description>
+    <copyright>Copyright © Real Serious Games 2018</copyright>
+    <dependencies>
+      <group targetFramework=".NETFramework3.5" />
+      <group targetFramework=".NETStandard2.0" />
+    </dependencies>
+  </metadata>
+</package>
