@@ -1,0 +1,16 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/Scripts/UI/BaseStyle.uss?fileID=7433441132597879392&amp;guid=fb10576749ec04d7fb3474b6960787d1&amp;type=3#BaseStyle" />
+    <ui:VisualElement name="list-entry" style="height: 100%; width: 100%;">
+        <ui:VisualElement name="cell_header" class="cell_header" style="flex-grow: 1; height: 75%; background-image: resource(&apos;egs-fall-guys-falloween-event-2024-breaker-1919x1080-a1e8fff8ff37&apos;); background-color: rgba(39, 178, 53, 0.56); border-top-left-radius: 25px; border-top-right-radius: 25px;" />
+        <ui:VisualElement name="cell_bottom" class="cell_bottom" style="flex-grow: 1; height: 25%; border-bottom-left-radius: 25px; border-bottom-right-radius: 25px; flex-direction: row; padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px;">
+            <ui:VisualElement name="product_logo" style="flex-grow: 1; background-image: resource(&apos;Fortnite_F_lettermark_logo&apos;); border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; background-size: 48px 48px; -unity-background-scale-mode: scale-to-fit;" />
+            <ui:Label text="Fortnite" name="product_name" style="color: rgb(255, 255, 255); -unity-text-align: middle-center; font-size: 22px; -unity-font-style: bold; margin-left: 10px; margin-right: 10px; letter-spacing: -10px; word-spacing: 0;" />
+            <ui:VisualElement name="product_spacer" style="flex-grow: 1;" />
+            <ui:VisualElement name="product_fsk" style="flex-grow: 1; background-image: resource(&apos;usk12&apos;); -unity-background-scale-mode: scale-to-fit; background-size: 48px 48px; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px;" />
+            <ui:VisualElement name="product_button_group" style="flex-grow: 1; border-left-width: 0;">
+                <ui:Button text="Purchase" name="product_button" class="product_button" style="border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; height: 60%; margin-top: 0; margin-right: 10px; margin-bottom: 0; margin-left: 10px; border-left-color: rgba(0, 0, 0, 0); border-right-color: rgba(0, 0, 0, 0); border-top-color: rgba(0, 0, 0, 0); border-bottom-color: rgba(0, 0, 0, 0);" />
+                <ui:Label text="In-app purchases" name="product_subtitle" class="product_subtitle" style="font-size: 10px; color: rgb(106, 106, 106); -unity-text-align: upper-center; height: 40%; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

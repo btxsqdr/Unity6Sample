@@ -1,28 +1,43 @@
 :root {    
-    justify-content: center;
-    align-items: center;
-    --border-width: 4px;
+    --epic-black: #090804;
+    --epic-dark-gray: #1b1b1e;
+    --epic-button-gray: #323235;
+    --epic-button-subtitle-gray: #86868a;
+    --epic-button-title-color: #2a8dbb;
 }
 
-.debug-box {
-    border-width: 2px;
-    border-color: red;
-}
-
-.nav-bar {
-    border-width: 2px;
-    border-color: red;
-    width: 786px;
-    height: 200px;
-    position: relative;
-    top:0px;
-}
-
-.scroll-box {
-    width: 500px;
-    height: 350px;
-}
-
-.product-cell {
+.cell_header {
     
 }
+
+.cell_bottom {
+    background-color: var(--epic-dark-gray);
+}
+
+.product_button {
+    background-color: var(--epic-button-gray);
+    color: var(--epic-button-title-color);
+}
+
+.product_subtitle {
+    color: var(--epic-button-subtitle-gray);
+}
+
+/*.debug-box {*/
+/*    border-width: 2px;*/
+/*    border-color: red;*/
+/*}*/
+
+/*.nav-bar {*/
+/*    border-width: 2px;*/
+/*    border-color: red;*/
+/*    width: 786px;*/
+/*    height: 200px;*/
+/*    position: relative;*/
+/*    top:0px;*/
+/*}*/
+
+/*.scroll-box {*/
+/*    width: 500px;*/
+/*    height: 350px;*/
+/*}*/
