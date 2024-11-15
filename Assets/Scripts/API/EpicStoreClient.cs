@@ -1,40 +1,57 @@
 using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
-using UnityEngine;
 using Proyecto26;
+using UnityEngine;
+using RestSharp;
+using RestClient = RestSharp.RestClient;
 
 namespace Unity6Sample {
-
   public class EpicStoreNoResultsException : Exception {
     public EpicStoreNoResultsException() {
       Debug.LogError("Epic Store does not return results.");
     }
   }
 
-  public class APIClient {
+  public class EpicStoreClient {
     private static readonly string EPIC_STORE_URL = "https://store.epicgames.com/en-US/";
     
-    public static async Task<Dictionary<string, EpicProduct>> FetchEpicStoreRaw() {
-      string url = EPIC_STORE_URL;
-
-      RestClient.Request(new RequestHelper {
+    public static void FetchEpicStoreRaw(Action<Dictionary<string, EpicProduct>> callback) {
+      Proyecto26.RestClient.Request(new RequestHelper {
         Uri = EPIC_STORE_URL,
         Method = "GET",
         Timeout = 5,
         ContentType = "text/plain",
         Headers = {{ "User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36" }}
       }).Then(response => {
-        return ParseEpicContentForProducts(response.Text);
+        callback?.Invoke(ParseEpicContentForProducts(response.Text));
       }).Catch(err => {
         Debug.LogError(err);
+        callback?.Invoke(null);
       });
-      return null;
+      
+      // var client = new RestClient(new RestClientOptions(EPIC_STORE_URL) {
+      //   Timeout = TimeSpan.FromSeconds(5),
+      //   UserAgent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
+      // });
+      // var request = new RestRequest();
+      // request.Method = Method.Get;
+      // request.AddHeader("Accept", "text/plain");
+      // request.AddHeader("Content-Type", "text/plain");
+      //
+      // var response = client.ExecuteGet(request);
+      //
+      // Debug.Log($"response: {response.StatusCode}: {response.Content}");
+      //
+      // ParseEpicContentForProducts(response.Content);
+      //
+      // Debug.Log("FetchEpicStoreRaw end");
+
     }
 
     private static Dictionary<string, EpicProduct> ParseEpicContentForProducts(string content) {
+      if (string.IsNullOrEmpty(content)) throw new NullReferenceException("content cannot be null");
+
       string pattern = @"""offer"":{""title"":""(?'title'.*?)"".*?""id"":""(?'id'[\w\d]*?)"".*?""offerType"":""(?'offerType'.*?)"".*?""description"":""(?'description'.*?)"".*?""OfferImageWide"",""url"":""(?'OfferImageWide'.*?)""}";
       RegexOptions options = RegexOptions.IgnoreCase | RegexOptions.Multiline;
 
@@ -55,7 +72,7 @@ namespace Unity6Sample {
             offerImageWide = offerImageWide
           };
           
-          Debug.Log($"title {title}");
+          // Debug.Log($"title {title}");
           
           products.Add(id, product);
         }

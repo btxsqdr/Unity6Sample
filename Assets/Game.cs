@@ -18,39 +18,20 @@ namespace Unity6Sample {
   }
 
   public class Game : MonoBehaviour {
-    private readonly string MOCKAPI_BASE_URL = "https://6731b5a67aaf2a9aff11acdf.mockapi.io/api/v1";
     
     void Start() {
       StartCoroutine(FetchEpicStoreData());
-      
-      // string url = MOCKAPI_BASE_URL + "/Users";
-      // StartCoroutine(FetchData(url));
     }
 
     IEnumerator FetchEpicStoreData() {
-      // data scrap epic store 
-      APIClient.FetchEpicStoreRaw();
+        // data scrap epic store 
+        EpicStoreClient.FetchEpicStoreRaw((data) => {
+            Debug.Log($"Data fetched from Epic Store: {data?.Count}");
+        });
 
-      yield return null;
+        yield return null;
     }
     
-    IEnumerator FetchData(string url) {
-      using (UnityWebRequest request = UnityWebRequest.Get(url)) {
-        yield return request.SendWebRequest();
-        if (request.result == UnityWebRequest.Result.ConnectionError) {
-          Debug.LogError(request.error);
-        }
-        else {
-          try {
-            User[] user = JsonConvert.DeserializeObject<User[]>(request.downloadHandler.text);
-
-            Debug.Log($"user: name: {user?.First()?.name}");
-          }
-          catch (Exception e) {
-            Debug.LogError(e);
-          }
-        }
-      }
-    }
+    
   }
 }
