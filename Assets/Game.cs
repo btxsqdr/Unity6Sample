@@ -29,9 +29,7 @@ namespace Unity6Sample {
 
     IEnumerator FetchEpicStoreData() {
       // data scrap epic store 
-      string url = EPIC_STORE_URL;
-
-      
+      APIClient.FetchEpicStoreRaw();
 
       yield return null;
     }
