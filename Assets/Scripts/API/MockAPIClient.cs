@@ -7,6 +7,16 @@ using UnityEngine.Networking;
 
 namespace Unity6Sample {
 
+    [Serializable]
+    public class User {
+        public string id;
+        public string name;
+        public string createdAt;
+        public int attack;
+        public int defense;
+        public int hp;
+    }
+
     public class MockAPIClient : MonoBehaviour {
         private readonly string MOCKAPI_BASE_URL = "https://6731b5a67aaf2a9aff11acdf.mockapi.io/api/v1";
 

@@ -12,6 +12,15 @@ namespace Unity6Sample {
       Debug.LogError("Epic Store does not return results.");
     }
   }
+  
+  [Serializable]
+  public struct EpicProduct {
+    public string id;
+    public string title;
+    public string description;
+    public string offerType;
+    public string offerImageWide;
+  }
 
   public class EpicStoreClient {
     private static readonly string EPIC_STORE_URL = "https://store.epicgames.com/en-US/";
@@ -85,12 +94,4 @@ namespace Unity6Sample {
     }
   }
 
-  [Serializable]
-  public struct EpicProduct {
-    public string id;
-    public string title;
-    public string description;
-    public string offerType;
-    public string offerImageWide;
-  }
 }
