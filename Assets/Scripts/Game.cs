@@ -11,9 +11,7 @@ namespace Unity6Sample {
   public class Game : MonoBehaviour {
     
     void Start() {
-      EpicStoreClient.FetchEpicStoreRaw((data) => {
-        Debug.Log($"Data fetched from Epic Store: {data?.Count}");
-      });
+      
     }
   }
 }
