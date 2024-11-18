@@ -4,6 +4,8 @@
     --epic-button-gray: #323235;
     --epic-button-subtitle-gray: #86868a;
     --epic-button-title-color: #2a8dbb;
+    height: 100%;
+    width: 100%;
 }
 
 .cell_header {
@@ -22,22 +24,3 @@
 .product_subtitle {
     color: var(--epic-button-subtitle-gray);
 }
-
-/*.debug-box {*/
-/*    border-width: 2px;*/
-/*    border-color: red;*/
-/*}*/
-
-/*.nav-bar {*/
-/*    border-width: 2px;*/
-/*    border-color: red;*/
-/*    width: 786px;*/
-/*    height: 200px;*/
-/*    position: relative;*/
-/*    top:0px;*/
-/*}*/
-
-/*.scroll-box {*/
-/*    width: 500px;*/
-/*    height: 350px;*/
-/*}*/

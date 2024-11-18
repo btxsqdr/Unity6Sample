@@ -507,7 +507,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _document: {fileID: 1018023169}
   _styleSheet: {fileID: 7433441132597879392, guid: fb10576749ec04d7fb3474b6960787d1, type: 3}
-  _visualTreeAsset: {fileID: 9197481963319205126, guid: bd814c988d40e2948ab350346e71bbdf, type: 3}
+  _mainView: {fileID: 9197481963319205126, guid: bd814c988d40e2948ab350346e71bbdf, type: 3}
+  _productCellView: {fileID: 9197481963319205126, guid: 3262e94ee64a6409eb1827e7ea1c6569, type: 3}
 --- !u!1 &1256872185
 GameObject:
   m_ObjectHideFlags: 0

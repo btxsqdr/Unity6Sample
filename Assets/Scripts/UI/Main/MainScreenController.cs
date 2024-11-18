@@ -4,28 +4,24 @@ using UnityEngine;
 namespace Unity6Sample {
 
     public interface IViewController {
-        void ConnectModel();
-        void ConnectView();
+        void ConnectModelAndView();
     }
 
     public class MainScreenController : MonoBehaviour, IViewController {
         [SerializeField] MainScreenView view;
-        private readonly MainScreenModel model;
+        private readonly MainScreenModel model = new MainScreenModel();
 
         private void Start() {
-            ConnectModel();
-            ConnectView();
+            Preconditions.CheckState(view);
+            
+            ConnectModelAndView();
         }
 
         private void Update() {
             
         }
 
-        public void ConnectModel() {
-            
-        }
-
-        public void ConnectView() {
+        public void ConnectModelAndView() {
             
         }
 

@@ -2,27 +2,50 @@ using System;
 using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UIElements;
 
 namespace Unity6Sample {
     public class MainScreenView : BaseView, IScreenView {
-        [SerializeField] private UIDocument _document;
-        [SerializeField] private StyleSheet _styleSheet;
-        [SerializeField] private VisualTreeAsset _visualTreeAsset;
-
-        private StoreController _storeController;
+        [SerializeField] UIDocument _document;
+        [SerializeField] StyleSheet _styleSheet;
+        [SerializeField] VisualTreeAsset _mainView;
+        [SerializeField] VisualTreeAsset _productCellView;
         
         private void Start() {
-            this.IsNull(_document, _styleSheet, _visualTreeAsset);
+            Preconditions.CheckNotNull(_document);
+            Preconditions.CheckNotNull(_styleSheet);
+            Preconditions.CheckNotNull(_mainView);
+            Preconditions.CheckNotNull(_productCellView);
             
-            _storeController = new StoreController(_document.rootVisualElement, _visualTreeAsset, _styleSheet);
+            StartCoroutine(Generate());
         }
 
         private void OnValidate() {
             if (Application.isPlaying) return;
-            if (_storeController is null) return;
             
-            _storeController.OnValidate();
+            StartCoroutine(Generate());
+        }
+        
+        private IEnumerator Generate() {
+            yield return null;
+            
+            var root = _document.rootVisualElement;
+            root.Clear();
+            root.styleSheets.Add(_styleSheet);
+
+            var mainView = _mainView.Instantiate();
+            
+            // var listViewRoot = mainView.Q<ListView>("product_list");
+            // listViewRoot.makeItem = () => _productCellView.Instantiate();
+            // listViewRoot.bindItem = (item, index) => {
+            //     var cell = item as VisualElement;
+            //     // cell.Q<Label>("product-name").text = $"Product {index}";
+            //     // cell.Q<Label>("product-price").text = $"Price {index}";
+            // };
+            // listViewRoot.itemsSource = new string[10];
+            
+            root.Add(mainView);
         }
 
         // private void OnValidate() {
