@@ -1,4 +1,5 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:Template name="product_list" src="project://database/Assets/Scripts/UI/product_list.uxml?fileID=9197481963319205126&amp;guid=4fb140172ba80e144b20cec395bd5c4e&amp;type=3#product_list" />
     <Style src="project://database/Assets/Scripts/UI/BaseStyle.uss?fileID=7433441132597879392&amp;guid=fb10576749ec04d7fb3474b6960787d1&amp;type=3#BaseStyle" />
     <ui:VisualElement name="container" style="flex-grow: 1; position: absolute; align-self: center; align-content: center; height: 100%; width: 100%; background-color: rgb(0, 0, 0);">
         <ui:VisualElement name="header" style="flex-grow: 1; top: 0; height: 10%; width: 100%; align-content: auto; position: absolute; flex-direction: row; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 10px; padding-right: 20px; padding-bottom: 10px; padding-left: 20px;">
@@ -10,6 +11,6 @@
                 <ui:Button icon-image="project://database/Assets/UI/Resources/epic-settings-button.png?fileID=2800000&amp;guid=fdc378cb64c536343be92f962b0bd84d&amp;type=3#epic-settings-button" enable-rich-text="false" emoji-fallback-support="false" name="button_settings" style="right: 0; align-self: center; width: 20%; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px; height: 100%; align-content: flex-start; background-color: rgba(188, 188, 188, 0); position: absolute; top: auto; align-items: center; border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; justify-content: center;" />
             </ui:VisualElement>
         </ui:VisualElement>
-        <ui:ListView name="product_list" virtualization-method="FixedHeight" fixed-item-height="450" class="product_list" style="justify-content: space-between; align-self: auto; align-content: stretch; align-items: center; height: 90%; top: 10%; width: 100%; min-width: 100%; min-height: 90%;" />
+        <ui:Instance template="product_list" name="product_list" />
     </ui:VisualElement>
 </ui:UXML>

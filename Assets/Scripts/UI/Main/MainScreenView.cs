@@ -1,8 +1,5 @@
-using System;
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.UIElements;
 
 namespace Unity6Sample {
@@ -38,10 +35,11 @@ namespace Unity6Sample {
             
             var listViewRoot = mainView.Q<ListView>("product_list");
             listViewRoot.makeItem = () => _productCellView.Instantiate();
-            listViewRoot.bindItem = (item, index) => {
-                var cell = item as VisualElement;
-                // cell.Q<Label>("product-name").text = $"Product {index}";
-                // cell.Q<Label>("product-price").text = $"Price {index}";
+            listViewRoot.bindItem = (cell, index) => {
+                cell.Q<Label>("product_name").text = $"Product {index}";
+                cell.Q<Button>("product_button").clickable.clicked += () => {
+                    Debug.Log($"open product detail {index}");
+                };
             };
             listViewRoot.itemsSource = new string[10];
             

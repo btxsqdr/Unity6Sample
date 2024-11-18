@@ -1,0 +1,3 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:ListView name="product_list" virtualization-method="FixedHeight" fixed-item-height="450" class="product_list" style="justify-content: space-between; align-self: auto; align-content: stretch; align-items: stretch; height: 90%; top: 10%; width: 100%; min-width: 100%; min-height: 90%;" />
+</ui:UXML>
