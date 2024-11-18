@@ -36,14 +36,14 @@ namespace Unity6Sample {
 
             var mainView = _mainView.Instantiate();
             
-            // var listViewRoot = mainView.Q<ListView>("product_list");
-            // listViewRoot.makeItem = () => _productCellView.Instantiate();
-            // listViewRoot.bindItem = (item, index) => {
-            //     var cell = item as VisualElement;
-            //     // cell.Q<Label>("product-name").text = $"Product {index}";
-            //     // cell.Q<Label>("product-price").text = $"Price {index}";
-            // };
-            // listViewRoot.itemsSource = new string[10];
+            var listViewRoot = mainView.Q<ListView>("product_list");
+            listViewRoot.makeItem = () => _productCellView.Instantiate();
+            listViewRoot.bindItem = (item, index) => {
+                var cell = item as VisualElement;
+                // cell.Q<Label>("product-name").text = $"Product {index}";
+                // cell.Q<Label>("product-price").text = $"Price {index}";
+            };
+            listViewRoot.itemsSource = new string[10];
             
             root.Add(mainView);
         }
