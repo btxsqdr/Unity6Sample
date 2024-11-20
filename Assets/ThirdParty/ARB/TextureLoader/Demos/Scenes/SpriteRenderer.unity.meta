@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 1bda7d991e60544ab99fc561f0e6e704
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 293994
+  packageName: TextureLoader
+  packageVersion: 1.1.0
+  assetPath: Assets/ARB/TextureLoader/Demos/Scenes/SpriteRenderer.unity
+  uploadId: 706906

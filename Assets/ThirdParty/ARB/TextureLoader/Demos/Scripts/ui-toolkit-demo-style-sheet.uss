@@ -1,0 +1,23 @@
+.grid {
+    flex-wrap: wrap;
+    flex-direction: row;
+    flex-grow: 1;
+    width: 100%;
+    justify-content: center;
+}
+
+.grid-cell {
+    width: 256px;
+    height: 256px;
+    -unity-background-scale-mode: scale-and-crop;
+    margin-top: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: rgb(204, 204, 204);
+    flex-grow: 1;
+}

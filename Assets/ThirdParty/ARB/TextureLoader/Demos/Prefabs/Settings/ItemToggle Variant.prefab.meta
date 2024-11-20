@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: ea02cc4b5961b459d89179e0f0aafac7
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 293994
+  packageName: TextureLoader
+  packageVersion: 1.1.0
+  assetPath: Assets/ARB/TextureLoader/Demos/Prefabs/Settings/ItemToggle Variant.prefab
+  uploadId: 706906

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 4865800c58dfc4e34a8b1b5fa29dbe6a
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 293994
+  packageName: TextureLoader
+  packageVersion: 1.1.0
+  assetPath: Assets/ARB/TextureLoader/Demos/Scripts/RotateAndMoveQuad.cs
+  uploadId: 706906

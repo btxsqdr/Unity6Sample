@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 1aaa48acc58db4ce1b5e68b579c4bec2
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 293994
+  packageName: TextureLoader
+  packageVersion: 1.1.0
+  assetPath: Assets/ARB/TextureLoader/Scripts/Enums/DirectoryType.cs
+  uploadId: 706906

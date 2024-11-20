@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d1f95b1803d6e4c21874d5db39d26390
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 293994
+  packageName: TextureLoader
+  packageVersion: 1.1.0
+  assetPath: Assets/ARB/TextureLoader/Demos/Fonts/OpenSans-Regular SDF.asset
+  uploadId: 706906

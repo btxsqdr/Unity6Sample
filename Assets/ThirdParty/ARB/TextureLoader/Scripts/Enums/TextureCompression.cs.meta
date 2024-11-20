@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 0a6f84a707c894ce387019e21ccb1459
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 293994
+  packageName: TextureLoader
+  packageVersion: 1.1.0
+  assetPath: Assets/ARB/TextureLoader/Scripts/Enums/TextureCompression.cs
+  uploadId: 706906

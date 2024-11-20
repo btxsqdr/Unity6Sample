@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: af9880b7fae5c416d857e490c72c0336
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 293994
+  packageName: TextureLoader
+  packageVersion: 1.1.0
+  assetPath: Assets/ARB/TextureLoader/Scripts/Extensions/DictionaryExtensions.cs
+  uploadId: 706906

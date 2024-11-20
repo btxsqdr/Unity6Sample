@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: ba8dde1a1f785473fa3401cc7fd2c3d9
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 293994
+  packageName: TextureLoader
+  packageVersion: 1.1.0
+  assetPath: Assets/ARB/TextureLoader/Scripts/CacheSettings.cs
+  uploadId: 706906

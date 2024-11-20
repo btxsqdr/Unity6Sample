@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: b7c3b6ecd06674245b6a80f754b59d89
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 293994
+  packageName: TextureLoader
+  packageVersion: 1.1.0
+  assetPath: Assets/ARB/TextureLoader/Scripts/Extensions/ColorExtensions.cs
+  uploadId: 706906

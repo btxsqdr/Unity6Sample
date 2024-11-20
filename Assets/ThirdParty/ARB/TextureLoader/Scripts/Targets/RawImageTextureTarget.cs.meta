@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: b4a3f4e5a3daa4cbaa1b4b47cdb58dfc
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 293994
+  packageName: TextureLoader
+  packageVersion: 1.1.0
+  assetPath: Assets/ARB/TextureLoader/Scripts/Targets/RawImageTextureTarget.cs
+  uploadId: 706906

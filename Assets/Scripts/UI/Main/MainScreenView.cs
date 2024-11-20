@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using ARB.TextureLoader;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -11,9 +12,9 @@ namespace Unity6Sample {
         [SerializeField] VisualTreeAsset _mainView;
         [SerializeField] VisualTreeAsset _productCellView;
         
-        private List<EpicProduct> _productList = new();
-        
         public event Action<EpicProduct> OnProductClick;
+
+        private List<EpicProduct> _productList = new();
         
         private void Start() {
             Preconditions.CheckNotNull(_document);
@@ -55,9 +56,15 @@ namespace Unity6Sample {
                     EpicProduct product = _productList[index];
 
                     cell.Q<Label>("product_name").text = $"{product.title}";
-                    cell.Q<Button>("product_button").clickable.clicked += () => {
-                        OnProductClick?.Invoke(product);
-                    };
+                    cell.Q<Button>("product_button").clickable.clicked += () => OnProductClick?.Invoke(product);
+
+                    TextureLoader
+                        .Load(product.thumbnail)
+                        .OnComplete((texture) => {
+                            cell.Q<VisualElement>("cell_header").style.backgroundImage = texture;
+                        })
+                        .Start();
+                    
                 } catch (Exception e) {
                     Debug.LogError(e);
                 }

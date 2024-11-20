@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cb3da385d4f84db095ae5dc1eeea193, type: 3}
+  m_Name: TextureLoaderSettings
+  m_EditorClassIdentifier: 
+  LogLevel: 20
+  TextureDefaults:
+    MinSize: 0
+    MaxSize: 512
+    MipmapChain: 1
+    Readable: 0
+    WrapMode: 1
+    FilterMode: 1
+    AnisoLevel: 0
+    Compression: 1
+    LinearColorSpace: 0
+  CacheDefaults:
+    Enabled: 1
+    Format: 0
+    Quality: 70
+    Days: 7
+    Directory: 1
+    Subdirectory: TextureLoader

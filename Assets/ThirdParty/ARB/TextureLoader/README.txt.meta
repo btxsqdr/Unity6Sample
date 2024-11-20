@@ -1,0 +1,26 @@
+fileFormatVersion: 2
+guid: 572e6d99271604abc896fd31d0a50e57
+labels:
+- Tween
+- Tweening
+- Animation
+- HOTween
+- Paths
+- VisualScripting
+- VisualEditor
+- iTween
+- LeanTween
+- DFTween
+- Ease
+- Easing
+- Shake
+- Punch
+TextScriptImporter:
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 293994
+  packageName: TextureLoader
+  packageVersion: 1.1.0
+  assetPath: Assets/ARB/TextureLoader/README.txt
+  uploadId: 706906

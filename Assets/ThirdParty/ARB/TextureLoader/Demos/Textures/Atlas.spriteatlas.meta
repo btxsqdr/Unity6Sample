@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 440d55a46a74043dc93dfc7477a08824
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 4343727234628468602
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 293994
+  packageName: TextureLoader
+  packageVersion: 1.1.0
+  assetPath: Assets/ARB/TextureLoader/Demos/Textures/Atlas.spriteatlas
+  uploadId: 706906

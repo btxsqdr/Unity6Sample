@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: e55d9375b871c4833bf17f41b1782471
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 293994
+  packageName: TextureLoader
+  packageVersion: 1.1.0
+  assetPath: Assets/ARB/TextureLoader/Demos/Prefabs/Settings/ItemDropdown Variant.prefab
+  uploadId: 706906

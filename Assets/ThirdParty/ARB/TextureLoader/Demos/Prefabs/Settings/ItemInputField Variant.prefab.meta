@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 66c42f5ec609544419f6c847fb2a4486
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 293994
+  packageName: TextureLoader
+  packageVersion: 1.1.0
+  assetPath: Assets/ARB/TextureLoader/Demos/Prefabs/Settings/ItemInputField Variant.prefab
+  uploadId: 706906

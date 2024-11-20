@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 7d5774fafb58c4d7ebfe4baed66fc31a
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 293994
+  packageName: TextureLoader
+  packageVersion: 1.1.0
+  assetPath: Assets/ARB/TextureLoader/Demos/Materials/Demo - Standard.mat
+  uploadId: 706906

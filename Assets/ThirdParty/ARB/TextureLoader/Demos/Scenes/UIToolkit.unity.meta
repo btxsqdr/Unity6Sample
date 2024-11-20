@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 9eb699fe4f371491c97641293c99172b
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 293994
+  packageName: TextureLoader
+  packageVersion: 1.1.0
+  assetPath: Assets/ARB/TextureLoader/Demos/Scenes/UIToolkit.unity
+  uploadId: 706906

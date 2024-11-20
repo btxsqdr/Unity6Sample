@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: d8eaeae0f314c4711a7935a7a9817782
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 293994
+  packageName: TextureLoader
+  packageVersion: 1.1.0
+  assetPath: Assets/ARB/TextureLoader/Scripts/Editor/TextureLoaderEditor.cs
+  uploadId: 706906

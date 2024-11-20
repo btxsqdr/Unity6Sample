@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 6a61212a90ffe4d9d8b19ce40882cc06
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 293994
+  packageName: TextureLoader
+  packageVersion: 1.1.0
+  assetPath: Assets/ARB/TextureLoader/Demos/Prefabs/Settings/SettingsView.prefab
+  uploadId: 706906

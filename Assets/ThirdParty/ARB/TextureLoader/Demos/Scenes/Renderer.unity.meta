@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 1850930ebb99646f0ac9e9042f005d0e
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 293994
+  packageName: TextureLoader
+  packageVersion: 1.1.0
+  assetPath: Assets/ARB/TextureLoader/Demos/Scenes/Renderer.unity
+  uploadId: 706906

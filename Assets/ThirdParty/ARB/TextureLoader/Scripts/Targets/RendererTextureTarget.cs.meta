@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 03c337c4ece6d4acbbb9c78408f6440d
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 293994
+  packageName: TextureLoader
+  packageVersion: 1.1.0
+  assetPath: Assets/ARB/TextureLoader/Scripts/Targets/RendererTextureTarget.cs
+  uploadId: 706906
