@@ -25,7 +25,7 @@ namespace Unity6Sample {
   public class EpicStoreClient {
     private static readonly string EPIC_STORE_URL = "https://store.epicgames.com/en-US/";
     
-    public static void FetchEpicStoreRaw(Action<Dictionary<string, EpicProduct>> callback) {
+    public static void FetchEpicStoreRaw(Action<ObservableList<EpicProduct>> callback) {
       Proyecto26.RestClient.Request(new RequestHelper {
         Uri = EPIC_STORE_URL,
         Method = "GET",
@@ -58,14 +58,14 @@ namespace Unity6Sample {
 
     }
 
-    private static Dictionary<string, EpicProduct> ParseEpicContentForProducts(string content) {
+    private static ObservableList<EpicProduct> ParseEpicContentForProducts(string content) {
       if (string.IsNullOrEmpty(content)) throw new NullReferenceException("content cannot be null");
 
       string pattern = @"""offer"":{""title"":""(?'title'.*?)"".*?""id"":""(?'id'[\w\d]*?)"".*?""offerType"":""(?'offerType'.*?)"".*?""description"":""(?'description'.*?)"".*?""OfferImageWide"",""url"":""(?'OfferImageWide'.*?)""}";
       RegexOptions options = RegexOptions.IgnoreCase | RegexOptions.Multiline;
 
       try {
-        Dictionary<string, EpicProduct> products = new Dictionary<string, EpicProduct>();
+        ObservableList<EpicProduct> products = new ();
         foreach (Match m in Regex.Matches(@content, pattern, options)) {
           string title = m.Groups["title"].Value;
           string id = m.Groups["id"].Value;
@@ -83,7 +83,7 @@ namespace Unity6Sample {
           
           // Debug.Log($"title {title}");
           
-          products.Add(id, product);
+          products.Add(product);
         }
         return products;  
       } catch (Exception e) {

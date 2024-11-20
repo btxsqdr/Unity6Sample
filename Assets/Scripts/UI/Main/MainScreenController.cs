@@ -1,28 +1,40 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Unity6Sample {
 
     public interface IViewController {
-        void ConnectModelAndView();
+        void ConnectModel();
+        void ConnectView();
     }
 
     public class MainScreenController : MonoBehaviour, IViewController {
         [SerializeField] MainScreenView view;
-        private readonly MainScreenModel model = new MainScreenModel();
+        private readonly MainScreenModel model = new();
 
         private void Start() {
-            Preconditions.CheckState(view);
+            this.IsNull(view, model);
             
-            ConnectModelAndView();
+            ConnectModel();
+            ConnectView();
         }
 
-        private void Update() {
-            
+        public void ConnectModel() {
+            model.OnProductListChange += list => UpdateView(list);
+            model.FetchEpicStoreData();
+        }
+        
+        public void ConnectView() {
+            view.OnProductClick += OnProductClick;
         }
 
-        public void ConnectModelAndView() {
-            
+        private void OnProductClick(EpicProduct product) {
+            throw new NotImplementedException();
+        }
+
+        private void UpdateView(IList<EpicProduct> list) {
+            view.UpdateList(list);
         }
 
         // public class Builder {

@@ -1,4 +1,6 @@
+using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -8,6 +10,10 @@ namespace Unity6Sample {
         [SerializeField] StyleSheet _styleSheet;
         [SerializeField] VisualTreeAsset _mainView;
         [SerializeField] VisualTreeAsset _productCellView;
+        
+        private List<EpicProduct> _productList = new();
+        
+        public event Action<EpicProduct> OnProductClick;
         
         private void Start() {
             Preconditions.CheckNotNull(_document);
@@ -24,6 +30,14 @@ namespace Unity6Sample {
             StartCoroutine(Generate());
         }
         
+        public void UpdateList(IList<EpicProduct> list) {
+            Debug.Log($"UpdateList called with {list.Count} items");
+
+            _productList = new List<EpicProduct>(list); //list as List<EpicProduct>;
+            
+            StartCoroutine(Generate());
+        }
+        
         private IEnumerator Generate() {
             yield return null;
             
@@ -34,34 +48,29 @@ namespace Unity6Sample {
             var mainView = _mainView.Instantiate();
             
             var listViewRoot = mainView.Q<ListView>("product_list");
+            listViewRoot.selectionType = SelectionType.Single;
             listViewRoot.makeItem = () => _productCellView.Instantiate();
             listViewRoot.bindItem = (cell, index) => {
-                cell.Q<Label>("product_name").text = $"Product {index}";
-                cell.Q<Button>("product_button").clickable.clicked += () => {
-                    Debug.Log($"open product detail {index}");
-                };
+                try {
+                    EpicProduct product = _productList[index];
+
+                    cell.Q<Label>("product_name").text = $"{product.title}";
+                    cell.Q<Button>("product_button").clickable.clicked += () => {
+                        OnProductClick?.Invoke(product);
+                    };
+                } catch (Exception e) {
+                    Debug.LogError(e);
+                }
             };
-            listViewRoot.itemsSource = new string[10];
+            listViewRoot.itemsSource = _productList;
             
             root.Add(mainView);
+            
+            listViewRoot.Rebuild();
+            
+            yield return null;
         }
 
-        // private void OnValidate() {
-        //     // _storeController
-        // }
-
-        // private void Start() {
-        //     Debug.Assert(_document, "_document is null", this);
-        //     Debug.Assert(_styleSheet, "_styleSheet is null", this);
-        //
-        //     StartCoroutine(Generate());
-        // }
-
-        // private void OnValidate() {
-        //     if (Application.isPlaying) return;
-        //     StartCoroutine(Generate());
-        // }
-        //
         // private IEnumerator Generate() {
         //     yield return null;
         //
