@@ -1,0 +1,16 @@
+{
+    "name": "Unity6Sample",
+    "rootNamespace": "",
+    "references": [
+        "GUID:4fb4df6462e5145ff831497c802100e1"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
