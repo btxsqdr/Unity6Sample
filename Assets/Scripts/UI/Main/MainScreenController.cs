@@ -4,9 +4,16 @@ using UnityEngine;
 
 namespace Unity6Sample {
 
+    public enum UIScreenEnum {
+        MainScreen,
+        ProductDetailScreen,
+        SettingsScreen
+    }
+
     public interface IViewController {
         void ConnectModel();
         void ConnectView();
+        void Router(UIScreenEnum screen);
     }
 
     public class MainScreenController : MonoBehaviour, IViewController {
@@ -27,6 +34,10 @@ namespace Unity6Sample {
         
         public void ConnectView() {
             view.OnProductClick += OnProductClick;
+        }
+
+        public void Router(UIScreenEnum screen) {
+            
         }
 
         private void OnProductClick(EpicProduct product) {
