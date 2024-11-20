@@ -21,13 +21,7 @@ namespace Unity6Sample {
     }
     
     public void FetchEpicStoreData() {
-      EpicStoreClient.FetchEpicStoreRaw((data) => {
-        Debug.Log($"FetchEpicStoreData... {data.Count}");
-        
-        Products = data;
-        
-        // foreach (var item in data) _products.Add(item);
-      });
+      EpicStoreClient.FetchEpicStoreRaw((data) => Products = data);
     }
   }
 }
