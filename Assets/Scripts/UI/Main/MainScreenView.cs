@@ -57,13 +57,7 @@ namespace Unity6Sample {
 
                     cell.Q<Label>("product_name").text = $"{product.title}";
                     cell.Q<Button>("product_button").clickable.clicked += () => OnProductClick?.Invoke(product);
-
-                    TextureLoader
-                        .Load(product.thumbnail)
-                        .OnComplete((texture) => {
-                            cell.Q<VisualElement>("cell_header").style.backgroundImage = texture;
-                        })
-                        .Start();
+                    cell.Q<VisualElement>("cell_header").style.AsyncLoadBackgroundImage(product.thumbnail);
                     
                 } catch (Exception e) {
                     Debug.LogError(e);
