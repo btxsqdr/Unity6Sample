@@ -436,8 +436,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1018023170}
   - component: {fileID: 1018023169}
+  - component: {fileID: 1018023171}
   m_Layer: 5
-  m_Name: ToolkitUI
+  m_Name: UIManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -478,6 +479,19 @@ Transform:
   - {fileID: 1256872186}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1018023171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1018023168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85443d70c9caad143aa785d6bd2f803a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainScreenView: {fileID: 1256872188}
 --- !u!1 &1256872185
 GameObject:
   m_ObjectHideFlags: 0
@@ -488,7 +502,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1256872186}
   - component: {fileID: 1256872188}
-  - component: {fileID: 1256872187}
   m_Layer: 5
   m_Name: MainScreen
   m_TagString: Untagged
@@ -511,19 +524,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1018023170}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1256872187
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1256872185}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c41724ae5284c149b41bfd816eda20d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  view: {fileID: 1256872188}
 --- !u!114 &1256872188
 MonoBehaviour:
   m_ObjectHideFlags: 0

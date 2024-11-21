@@ -17,10 +17,7 @@ namespace Unity6Sample {
         private List<EpicProduct> _productList = new();
         
         private void Start() {
-            Preconditions.CheckNotNull(_document);
-            Preconditions.CheckNotNull(_styleSheet);
-            Preconditions.CheckNotNull(_mainView);
-            Preconditions.CheckNotNull(_productCellView);
+            this.IsNull(_document, _styleSheet, _mainView, _productCellView);
             
             StartCoroutine(Generate());
         }

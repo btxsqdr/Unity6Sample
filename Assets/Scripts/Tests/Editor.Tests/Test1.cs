@@ -23,5 +23,10 @@ public class Test1 {
         
         // Assert.That(view, Is.Not.Null);
         Assert.That(model, Is.Not.Null);
+
+        model.Products.Returns(returnThis: new ObservableList<EpicProduct>());
+        Assert.That(model.Products, Is.Not.Null);
+
+        // controller = new MainScreenController();
     }
 }

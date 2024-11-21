@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Unity6Sample {
   public class MainScreenModel {
-    private ObservableList<EpicProduct> Products {
+    public ObservableList<EpicProduct> Products {
       get => _products;
       set {
         _products = value;

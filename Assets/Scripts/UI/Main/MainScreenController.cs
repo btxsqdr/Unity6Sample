@@ -16,12 +16,13 @@ namespace Unity6Sample {
         void Router(UIScreenEnum screen);
     }
 
-    public class MainScreenController : MonoBehaviour, IViewController {
-        [SerializeField] MainScreenView view;
-        private readonly MainScreenModel model = new();
+    public class MainScreenController : IViewController {
+        private readonly MainScreenView view;
+        private readonly MainScreenModel model;
 
-        private void Start() {
-            this.IsNull(view, model);
+        MainScreenController(MainScreenView view, MainScreenModel model) {
+            this.view = view;
+            this.model = model;
             
             ConnectModel();
             ConnectView();
@@ -36,6 +37,10 @@ namespace Unity6Sample {
             view.OnProductClick += OnProductClick;
         }
 
+        public void Update(float deltaTime) {
+            
+        }
+
         public void Router(UIScreenEnum screen) {
             
         }
@@ -48,16 +53,12 @@ namespace Unity6Sample {
             view.UpdateList(list);
         }
 
-        // public class Builder {
-        //     private readonly MainScreenModel model = new MainScreenModel();
-        //
-        //     public Builder Builder() {
-        //         return this;
-        //     }
-        //     
-        //     public MainScreenController Build() {
-        //         
-        //     }
-        // }
+        public class Builder {
+            readonly MainScreenModel model = new();
+        
+            public MainScreenController Build(MainScreenView view) {
+                return new MainScreenController(view, model);
+            }
+        }
     }
 }
